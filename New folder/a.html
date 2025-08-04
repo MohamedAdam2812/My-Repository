@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map Example</title>
+</head>
+<body>
+
+    <!-- Image with a map -->
+    <img src="shoe.jfif" usemap="#image-map" alt="Map Example" />
+
+    <!-- Define the map -->
+    <map name="image-map">
+        <!-- Define a rectangular area -->
+        <area shape="rect" coords="34,44,270,350" alt="Link 1" href="https://www.example1.com" />
+
+        <!-- Define a circular area -->
+        <area shape="circle" coords="400,150,50" alt="Link 2" href="https://www.example2.com" />
+
+        <!-- Define a polygonal area -->
+        <area shape="poly" coords="50,150,75,200,100,150" alt="Link 3" href="https://www.example3.com" />
+    </map>
+
+</body>
+</html>

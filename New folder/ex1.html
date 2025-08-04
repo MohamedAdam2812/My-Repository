@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Room Reservation System</title>
+</head>
+
+<body style="font-family: 'Segoe UI', sans-serif; margin:0; padding:0; background:#fff; color:#333;">
+
+    <!-- Hero Banner -->
+    <header style="text-align:center; background:url('https://images.unsplash.com/photo-1501117716987-c8e1ecb2101b') no-repeat center center/cover; padding:70px 20px; color:white;">
+        <h1 style="font-size:42px; text-shadow:0 0 8px #000;">🏨 Hotel Room Reservation</h1>
+    </header>
+
+    <!-- Reservation Form -->
+    <section id="reservation" style="padding:20px;">
+        <h2 style="color:#004080; text-align:center;">📝 Book Your Room</h2>
+
+        <!-- Action points to confirmation.html page -->
+        <form action="confirmation.html" method="POST" style="background:#fff; padding:20px; border-radius:10px; width:60%; margin:auto; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px;"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px;"><br><br>
+
+            <label for="room">Select Room:</label><br>
+            <select id="room" name="room" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px;">
+                <option value="Deluxe">Deluxe Room</option>
+                <option value="Suite">Luxury Suite</option>
+                <option value="Family">Family Room</option>
+            </select><br><br>
+
+            <label for="checkin">Check-in Date:</label><br>
+            <input type="date" id="checkin" name="checkin" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px;"><br><br>
+
+            <label for="checkout">Check-out Date:</label><br>
+            <input type="date" id="checkout" name="checkout" required style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px;"><br><br>
+
+            <button type="submit" style="background:#004080; color:#fff; font-weight:bold; padding:12px 20px; border:none; cursor:pointer; border-radius:6px; width:100%;">🏨 Reserve Now</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
