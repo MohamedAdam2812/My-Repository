@@ -1,0 +1,94 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+  }
+  
+  /* Container */
+  .signin-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  /* Form */
+  .signin-form h2 {
+    margin-bottom: 25px;
+    color: #4a3fbc;
+  }
+  
+  .signin-form label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .signin-form input[type="email"],
+  .signin-form input[type="password"],
+  .signin-form input[type="date"],
+  .signin-form select,
+  .signin-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1.8px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+  }
+  
+  .signin-form input[type="email"]:focus,
+  .signin-form input[type="password"]:focus,
+  .signin-form input[type="date"]:focus,
+  .signin-form select:focus,
+  .signin-form textarea:focus {
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.5);
+  }
+  
+  .signin-form input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    vertical-align: middle;
+  }
+  
+  .signin-form button {
+    margin-top: 25px;
+    width: 100%;
+    background-color: #4a3fbc;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-form button:hover,
+  .signin-form button:focus {
+    background-color: #382f8a;
+    outline: none;
+    box-shadow: 0 0 12px rgba(56, 47, 138, 0.7);
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .signin-container {
+      padding: 25px 20px;
+    }
+  }
+  
