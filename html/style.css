@@ -1,0 +1,131 @@
+/* Background and global layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-image: url('nature.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #000;
+}
+
+header, section, footer {
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Header container: flexbox for left/right alignment */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation Bar Styles */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;       /* flexbox for horizontal menu */
+  gap: 30px;           /* spacing between links */
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+  background-color: #0077cc;
+  color: white;
+}
+
+nav {
+  max-width: 600px;
+  width: 100%;
+}
+
+nav img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Product and cart layout */
+#products, #cart {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product, #cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.product img {
+  width: 150px;
+  height: auto;
+  cursor: grab;
+}
+
+#cart {
+  min-height: 150px;
+  background-color: #f9f9f9;
+  width: 300px;
+}
+
+/* Map size */
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+/* Overlay text on image */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  pointer-events: none;
+  user-select: none;
+  font-size: 1.2rem;
+}
+/* Hover and focus effect for product/category images */
+.product img,
+.image-container img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.product img:hover,
+.product img:focus,
+.image-container img:hover,
+.image-container img:focus {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  outline: none; /* Remove default outline */
+}

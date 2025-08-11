@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Shopping System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+          <h1>Welcome to SmartShop</h1>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Electronics</a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+<!-- 📍 Category Navigation via Image Map -->
+<nav>
+  <div class="image-container">
+    <img src="lap.webp" usemap="#categories" alt="Product Categories">
+    <div class="overlay-text">Laptop Category</div>
+  </div>
+  <map name="categories">
+    <area shape="rect" coords="0,0,200,200" alt="Electronics" href="electronics.html">
+    <area shape="rect" coords="200,0,400,200" alt="Clothing" href="clothing.html">
+    <area shape="rect" coords="400,0,600,200" alt="Home" href="#home">
+  </map>
+</nav>
+
+<!-- 🖼 Product Section with Drag and Drop -->
+<section id="products">
+  <div class="product" draggable="true" ondragstart="drag(event)" id="product1">
+    <img src="lap.webp" alt="Laptop">
+    <p>Laptop - $999</p>
+    <video controls width="150">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+
+  <div class="product" draggable="true" ondragstart="drag(event)" id="product2">
+    <img src="jacket.webp" alt="Jacket">
+    <p>Jacket - $79</p>
+  </div>
+
+  <div class="product" draggable="true" ondragstart="drag(event)" id="product3">
+    <img src="chair.jfif" alt="Chair">
+    <p>Chair - $129</p>
+  </div>
+</section>
+
+<!-- 🛒 Shopping Cart -->
+<section>
+  <h2>🛒 Shopping Cart (Drag products here)</h2>
+  <div id="cart" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</section>
+
+<!-- 📍 Geolocation -->
+<section>
+  <h2>📍 Your Location</h2>
+  <button onclick="getLocation()">Show My Location</button>
+  <p id="location-status"></p>
+  <div id="map"></div>
+</section>
+
+<!-- 📄 Purchase Form -->
+<section>
+  <h2>🧾 Purchase Form</h2>
+  <form onsubmit="alert('Order Submitted!'); return false;">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+
+    <label for="color">Color:</label><br>
+    <input type="color" id="color" name="color"><br><br>
+
+    <label for="delivery">Delivery Date:</label><br>
+    <input type="date" id="delivery" name="delivery"><br><br>
+
+    <label for="payment">Payment Method:</label><br>
+    <select id="payment" name="payment">
+      <option value="credit">Credit Card</option>
+      <option value="paypal">PayPal</option>
+      <option value="cash">Cash on Delivery</option>
+    </select><br><br>
+
+    <input type="submit" value="Complete Purchase">
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 SmartShop Online</p>
+</footer>
+
+<!-- Link to external JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
